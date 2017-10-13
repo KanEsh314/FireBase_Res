@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      A La Carte
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="getLogout()">
+        <ion-icon name="md-person" color="dark"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-tabs>
+  <ion-tab [root]="tab1Root" tabTitle="Promotion"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="A-La-Carte"></ion-tab>
+</ion-tabs>

@@ -1,0 +1,34 @@
+<!-- <ion-header>
+  <ion-navbar>
+    <ion-title>
+      A La Carte
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="getLogout()">
+        <ion-icon name="md-person" color="dark"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-header>
+	<ion-toolbar>
+		
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+
+	<ion-list>
+	<ion-item *ngFor="let menu of menuList">
+		<ion-avatar>
+			<img src="{{menu.image}}">
+		</ion-avatar>
+
+		<h2>{{menu.foodname}}</h2>
+		<p>RM <strong>{{menu.price}}</strong></p>
+	</ion-item>
+	</ion-list>
+
+</ion-content>
